@@ -8,7 +8,6 @@ public final class KeyConstant {
     public static final String URL_TRY_DRIVE_ADD = "tryDrive/add";
 
 
-
     /***DEVICE_TYPE_PHONE*/
     public static final int DEVICE_TYPE_PHONE = 0x0;
     /***DEVICE_TYPE_PAD*/
