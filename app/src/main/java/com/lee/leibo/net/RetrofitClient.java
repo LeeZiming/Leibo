@@ -8,7 +8,7 @@ import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
 import com.lee.leibo.BuildConfig;
-import com.lee.leibo.LeiboApplication;
+import com.lee.leibo.app.LeiboApplication;
 import com.lee.leibo.net.interceptor.HeaderInterceptor;
 import com.lee.leibo.net.interceptor.ReceivedCookiesInterceptor;
 import com.lee.leibo.net.interceptor.ResponseInterceptor;

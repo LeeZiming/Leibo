@@ -6,7 +6,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import com.blankj.utilcode.util.ToastUtils;
-import com.lee.leibo.LeiboApplication;
+import com.lee.leibo.app.LeiboApplication;
 import com.lee.leibo.R;
 import com.trello.rxlifecycle2.LifecycleProvider;
 

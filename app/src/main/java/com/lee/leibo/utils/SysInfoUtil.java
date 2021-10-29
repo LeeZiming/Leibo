@@ -11,7 +11,7 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
-import com.lee.leibo.LeiboApplication;
+import com.lee.leibo.app.LeiboApplication;
 import com.lee.leibo.constants.KeyConstant;
 import com.lee.leibo.net.TokenManager;
 

@@ -5,7 +5,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 
-import com.lee.leibo.LeiboApplication;
+import com.lee.leibo.app.LeiboApplication;
 import com.lee.leibo.constants.KeyConstant;
 import com.lee.leibo.net.TokenManager;
 import com.lee.leibo.utils.SysInfoUtil;

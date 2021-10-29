@@ -1,5 +1,6 @@
-package com.lee.leibo;
+package com.lee.leibo.app;
 
+import com.lee.leibo.R;
 import com.lee.leibo.ui.main.MainActivity;
 
 import me.goldze.mvvmhabit.base.BaseApplication;
@@ -15,7 +16,12 @@ public class LeiboApplication extends BaseApplication {
         //是否开启日志打印
         KLog.init(true);
 
-        //配置全局异常崩溃操作
+        initCrash();
+
+    }
+
+    //配置全局异常崩溃操作
+    private void initCrash() {
         CaocConfig.Builder.create()
                 .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //背景模式,开启沉浸式
                 .enabled(true) //是否启动全局异常捕获
@@ -28,6 +34,5 @@ public class LeiboApplication extends BaseApplication {
                 //.errorActivity(YourCustomErrorActivity.class) //崩溃后的错误activity
                 //.eventListener(new YourCustomEventListener()) //崩溃后的错误监听
                 .apply();
-
     }
 }
