@@ -12,6 +12,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.lee.leibo.BR;
 import com.lee.leibo.R;
 import com.lee.leibo.databinding.ActivityMainBinding;
+import com.lee.leibo.net.TokenManager;
 import com.sina.weibo.sdk.auth.AuthInfo;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import com.sina.weibo.sdk.auth.WbAuthListener;
@@ -44,18 +45,17 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     @Override
     public void initViewObservable() {
         super.initViewObservable();
-        binding.btnInit.setOnClickListener(v -> {
-            initSdk();
-        });
 
         binding.btnAuth.setOnClickListener(v -> {
             startClientAuth();
         });
+
     }
 
     @Override
     public void initData() {
         super.initData();
+        initSdk();
     }
 
     //init sdk
@@ -99,6 +99,11 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
             public void onComplete(Oauth2AccessToken token) {
                 ToastUtils.showShort("微博授权成功");
                 binding.tvResult.setText("微博授权成功");
+                TokenManager.setAccessToken(token.getAccessToken());
+                TokenManager.setRefreshToken(token.getRefreshToken());
+                TokenManager.setLoginName(token.getScreenName());
+                TokenManager.setUid(token.getUid());
+                KLog.e("Name = " + TokenManager.getLoginName() + " token = " + TokenManager.getAccessToken());
             }
 
             @Override
@@ -115,22 +120,4 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
         });
     }
 
-    private void startWebAuth() {
-        mWBAPI.authorizeWeb(new WbAuthListener() {
-            @Override
-            public void onComplete(Oauth2AccessToken token) {
-                ToastUtils.showShort("微博授权成功");
-            }
-
-            @Override
-            public void onError(UiError error) {
-                ToastUtils.showShort("微博授权出错");
-            }
-
-            @Override
-            public void onCancel() {
-                ToastUtils.showShort("微博授权取消");
-            }
-        });
-    }
 }

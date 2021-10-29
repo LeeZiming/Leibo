@@ -32,13 +32,14 @@ public class HeaderInterceptor implements Interceptor {
         long time = calendar.getTimeInMillis();
         String timestamp = time + "";
         // token处理
-        String token = TokenManager.getToken();
+        String token = TokenManager.getAccessToken();
         if (!TextUtils.isEmpty(token)) {
             token = DigestUtils.md5Hex(token + timestamp);
         }
-        String loginToken = TokenManager.getLoginToken();
+        String loginToken = TokenManager.getRefreshToken();
         // 拼接加密字段
-        String arg0 = TokenManager.getUseCode() + "_" + deviceId;
+//        String arg0 = TokenManager.getUseCode() + "_" + deviceId;
+        String arg0 = "_" + deviceId;
         // 拼接密钥key码
         String key = "";
         if (!TextUtils.isEmpty(deviceId)) {
@@ -52,7 +53,7 @@ public class HeaderInterceptor implements Interceptor {
         if (url.contains(KeyConstant.URL_USER_LOGIN) || url.contains(KeyConstant.URL_USER_REGISTER) || TextUtils.isEmpty(TokenManager.getLoginName()) || url.contains(KeyConstant.URL_COMMON_SMS_CODE)) {
             isLoginNamePhone = true;
         }
-        String loginName = isLoginNamePhone ? TokenManager.getLoginPhone() : TokenManager.getLoginName();
+        String loginName = TokenManager.getLoginName();
         if (url.contains(KeyConstant.URL_TRY_DRIVE_ADD) && !TokenManager.iamLoggedIn()) {
             loginName = "";
         }

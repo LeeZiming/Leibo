@@ -44,18 +44,15 @@ public class RetrofitClient {
 
     private Retrofit retrofit;
 
-    public static final String yudoUrl1 = "http://tsp-2021.yujoy.com.cn:6660/api/";// 正式环境
-    public static final String yudoUrl2 = "http://172.30.24.4:5316/YDSI/";// 莆田测试环境（老接口)
-    public static final String yudoUrl3 = "http://172.30.24.5:6316/api/";// 莆田测试环境(新接口-内网)
-    public static final String yudoUrl4 = "https://test.yujoy.com.cn:59010/api/"/*"https://ssl.yujoy.com.cn/api/"*/;// 莆田测试环境(新接口-外网)
-    public static final String yudoUrl5 = "http://172.22.2.1:5316/api/";// 深圳测试环境(新接口)
-    public static final String yudoUrl6 = "http://172.30.24.5:6616/api/";//莆田后台测试环境
-    public static String yudoUrl = getDefaultYudoUrl();
+    public static final String weiboUrl1 = "https://api.weibo.com/2/";// 正式环境
+
+
+    public static String weiboUrl = getDefaultYudoUrl();
 
     private static final String getDefaultYudoUrl() {
         String defaultUrl = SPUtils.getInstance().getString("yudoUrl");
         if (TextUtils.isEmpty(defaultUrl)) {
-            return yudoUrl1; //以后测试想改接口，改此处    默认莆田测试 上线时改为正式环境
+            return weiboUrl1; //以后测试想改接口，改此处    默认莆田测试 上线时改为正式环境
         }
         return defaultUrl;
     }
@@ -69,11 +66,6 @@ public class RetrofitClient {
     }
 
 
-    public static RetrofitClient getInstance2() {
-        return new RetrofitClient("http://172.22.2.18:5316/api/", null);
-    }
-
-
     private static class SingletonHolder {
         private static RetrofitClient INSTANCE;
 
@@ -81,7 +73,7 @@ public class RetrofitClient {
             if (INSTANCE == null) {
                 synchronized (SingletonHolder.class) {
                     if (INSTANCE == null) {
-                        INSTANCE = new RetrofitClient(yudoUrl, null);
+                        INSTANCE = new RetrofitClient(weiboUrl, null);
                     }
                 }
             }
@@ -90,7 +82,7 @@ public class RetrofitClient {
     }
 
     public static String getYudoUrl() {
-        return yudoUrl;
+        return weiboUrl;
     }
 
     private RetrofitClient(String url, Map<String, String> headers) {
@@ -99,7 +91,7 @@ public class RetrofitClient {
         }
         headers.put("Authorization", "");
         if (TextUtils.isEmpty(url)) {
-            url = yudoUrl5;
+            url = weiboUrl1;
         }
 
         if (httpCacheDirectory == null) {
