@@ -56,6 +56,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     public void initData() {
         super.initData();
         initSdk();
+        viewModel.reqDefaultShippingAddress();
     }
 
     //init sdk
@@ -65,25 +66,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
         mWBAPI.registerApp(this, authInfo);
     }
 
-    private void startAuth() {
-        //auth
-        mWBAPI.authorize(new WbAuthListener() {
-            @Override
-            public void onComplete(Oauth2AccessToken token) {
-                ToastUtils.showShort("微博授权成功");
-            }
-
-            @Override
-            public void onError(UiError error) {
-                ToastUtils.showShort("微博授权出错");
-            }
-
-            @Override
-            public void onCancel() {
-                ToastUtils.showShort("微博授权取消");
-            }
-        });
-    }
 
 
     @Override
