@@ -34,10 +34,10 @@ public class HeaderInterceptor implements Interceptor {
 
 
         // 拼接header参数
-        Request.Builder requestBuilder = original.newBuilder()
-                .header("Content-Type", "application/json;charset=UTF-8")
-                .header("User-Agent", "yundu-android-phone102")
-                .header("access_token", token);
+        Request.Builder requestBuilder = original.newBuilder();
+//                .header("Content-Type", "application/json;charset=UTF-8")
+//                .header("User-Agent", "yundu-android-phone102")
+//                .header("access_token", token);
 
         // build header
         Request request = requestBuilder.build();

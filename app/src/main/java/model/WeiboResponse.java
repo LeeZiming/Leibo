@@ -2,10 +2,17 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class WeiboResponse {
-    @SerializedName("idstr")
-    private String id; //微博ID
+import java.util.List;
 
-    @SerializedName("created_at")
-    private String createdTime; //创建时间
+public class WeiboResponse {
+    @SerializedName("statuses")
+    private List<WeiboInfo> weiboInfoList;
+
+    public List<WeiboInfo> getWeiboInfoList() {
+        return weiboInfoList;
+    }
+
+    public void setWeiboInfoList(List<WeiboInfo> weiboInfoList) {
+        this.weiboInfoList = weiboInfoList;
+    }
 }

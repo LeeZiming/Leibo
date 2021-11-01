@@ -2,9 +2,6 @@ package com.lee.leibo.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
-import android.view.View;
 
 import androidx.annotation.Nullable;
 
@@ -50,13 +47,15 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
             startClientAuth();
         });
 
+        binding.btnGetWeibo.setOnClickListener(view -> {
+            viewModel.reqWeiboTimeLine();
+        });
     }
 
     @Override
     public void initData() {
         super.initData();
         initSdk();
-        viewModel.reqDefaultShippingAddress();
     }
 
     //init sdk
@@ -65,7 +64,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
         mWBAPI = WBAPIFactory.createWBAPI(this);
         mWBAPI.registerApp(this, authInfo);
     }
-
 
 
     @Override
