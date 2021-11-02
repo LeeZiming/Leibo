@@ -10,6 +10,7 @@ import com.lee.leibo.BR;
 import com.lee.leibo.R;
 import com.lee.leibo.databinding.ActivityMainBinding;
 import com.lee.leibo.net.TokenManager;
+import com.lee.leibo.ui.timeline.TimeLineActivity;
 import com.sina.weibo.sdk.auth.AuthInfo;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import com.sina.weibo.sdk.auth.WbAuthListener;
@@ -47,8 +48,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
             startClientAuth();
         });
 
-        binding.btnGetWeibo.setOnClickListener(view -> {
-            viewModel.reqWeiboTimeLine();
+        binding.btnEnterWeibo.setOnClickListener(view -> {
+            startActivity(TimeLineActivity.class);
         });
     }
 

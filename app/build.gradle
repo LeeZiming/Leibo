@@ -45,16 +45,25 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //MVVM框架
-    implementation 'com.github.goldze:MVVMHabit:4.0.0'
-    //Retrofit2
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    //工具库
-    implementation 'com.blankj:utilcodex:1.30.6'
-    //cookie持久化
-    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
-    //RxJava
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
-    //顶栏
-    implementation 'com.wuhenzhizao:titlebar:1.2.0'
+
+    implementation 'com.github.goldze:MVVMHabit:4.0.0'                  //MVVM框架
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'              //Retrofit2
+    implementation 'com.blankj:utilcodex:1.30.6'                        //工具库
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'  //cookie持久化
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'                  //RxJava
+    implementation 'com.wuhenzhizao:titlebar:1.2.0'                     //顶栏
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'                 //必须 1.0.0 以上
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+    implementation  'com.scwang.smart:refresh-header-radar:2.0.3'       //雷达刷新头
+    implementation  'com.scwang.smart:refresh-header-falsify:2.0.3'     //虚拟刷新头
+    implementation  'com.scwang.smart:refresh-header-material:2.0.3'    //谷歌刷新头
+    implementation  'com.scwang.smart:refresh-header-two-level:2.0.3'   //二级刷新头
+    implementation  'com.scwang.smart:refresh-footer-ball:2.0.3'        //球脉冲加载
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.3'    //经典加载
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4' //BaseQuickAdapter
+
+
 }

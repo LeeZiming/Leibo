@@ -1,4 +1,4 @@
-package model;
+package com.lee.leibo.model;
 
 import com.google.gson.annotations.SerializedName;
 
