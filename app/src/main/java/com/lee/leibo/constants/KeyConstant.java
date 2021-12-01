@@ -2,10 +2,9 @@ package com.lee.leibo.constants;
 
 public final class KeyConstant {
 
-    public static final String URL_COMMON_SMS_CODE = "common/reqSMSVer";
-    public static final String URL_USER_LOGIN = "loginManager/userLogin";
-    public static final String URL_USER_REGISTER = "loginManager/register";
-    public static final String URL_TRY_DRIVE_ADD = "tryDrive/add";
+    public static final String APP_KY = "1335885399";
+    public static final String REDIRECT_URL = "https://api.weibo.com/oauth2/default.html";
+    public static final String SCOPE = "";
 
 
     /***DEVICE_TYPE_PHONE*/

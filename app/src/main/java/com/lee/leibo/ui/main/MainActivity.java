@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import com.blankj.utilcode.util.ToastUtils;
 import com.lee.leibo.BR;
 import com.lee.leibo.R;
+import com.lee.leibo.constants.KeyConstant;
 import com.lee.leibo.databinding.ActivityMainBinding;
 import com.lee.leibo.net.TokenManager;
 import com.lee.leibo.ui.timeline.TimeLineActivity;
@@ -22,10 +23,6 @@ import me.goldze.mvvmhabit.base.BaseActivity;
 import me.goldze.mvvmhabit.utils.KLog;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewModel> {
-
-    private static final String APP_KY = "1335885399";
-    private static final String REDIRECT_URL = "https://api.weibo.com/oauth2/default.html";
-    private static final String SCOPE = "";
 
     private IWBAPI mWBAPI;
 
@@ -61,7 +58,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
 
     //init sdk
     private void initSdk() {
-        AuthInfo authInfo = new AuthInfo(this, APP_KY, REDIRECT_URL, SCOPE);
+        AuthInfo authInfo = new AuthInfo(this, KeyConstant.APP_KY, KeyConstant.REDIRECT_URL, KeyConstant.SCOPE);
         mWBAPI = WBAPIFactory.createWBAPI(this);
         mWBAPI.registerApp(this, authInfo);
     }

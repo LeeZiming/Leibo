@@ -1,12 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="XUITheme.Phone">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/blue_11406C</item>
         <item name="colorPrimaryDark">@color/blue_032951</item>
         <item name="colorAccent">@color/blue_8AABCA</item>
     </style>
+
 
     <style name="AppTheme.FullScreen">
         <item name="android:windowBackground">@color/blue_8AABCA</item>

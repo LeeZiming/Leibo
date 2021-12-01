@@ -1,7 +1,9 @@
 package com.lee.leibo.app;
 
+import com.lee.leibo.BuildConfig;
 import com.lee.leibo.R;
 import com.lee.leibo.ui.main.MainActivity;
+import com.xuexiang.xui.XUI;
 
 import me.goldze.mvvmhabit.base.BaseApplication;
 import me.goldze.mvvmhabit.crash.CaocConfig;
@@ -17,7 +19,7 @@ public class LeiboApplication extends BaseApplication {
         KLog.init(true);
 
         initCrash();
-
+        initUI();
     }
 
     //配置全局异常崩溃操作
@@ -34,5 +36,17 @@ public class LeiboApplication extends BaseApplication {
                 //.errorActivity(YourCustomErrorActivity.class) //崩溃后的错误activity
                 //.eventListener(new YourCustomEventListener()) //崩溃后的错误监听
                 .apply();
+    }
+
+    /**
+     * 初始化XUI 框架
+     */
+    private void initUI() {
+        XUI.debug(LeiboApplication.isDebug());
+    }
+
+
+    public static boolean isDebug() {
+        return BuildConfig.DEBUG;
     }
 }
