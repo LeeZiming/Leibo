@@ -2,6 +2,7 @@ package com.lee.leibo.api;
 
 import io.reactivex.Observable;
 
+import com.lee.leibo.model.UserInfo;
 import com.lee.leibo.model.WeiboResponse;
 
 import retrofit2.http.GET;
@@ -12,5 +13,10 @@ public interface WeiboApiService {
     //获取指定微博的转发微博列表
     @GET("statuses/home_timeline.json")
     Observable<WeiboResponse> getWeiboList(@Query("access_token") String token,
-                                                         @Query("id") long id);
+                                           @Query("id") long id);
+
+    @GET("users/show.json")
+    Observable<UserInfo> getUserInfo(@Query("access_token") String token,
+                                     @Query("uid") long id,
+                                     @Query("screen_name") String name);
 }

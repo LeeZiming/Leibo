@@ -54,6 +54,10 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
     public void initData() {
         super.initData();
         initSdk();
+
+        if (TokenManager.iamLoggedIn()) {
+            startActivity(ProfileActivity.class);
+        }
     }
 
     //init sdk
