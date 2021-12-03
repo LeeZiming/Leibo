@@ -71,6 +71,9 @@ public class UserInfo implements Serializable {
     @SerializedName("allow_all_comment")
     private boolean allowAllComment;
 
+    @SerializedName("avatar_hd")
+    private String avatarHD;
+
     @SerializedName("avatar_large")
     private String avatarLarge;
 
@@ -260,6 +263,14 @@ public class UserInfo implements Serializable {
 
     public void setAllowAllComment(boolean allowAllComment) {
         this.allowAllComment = allowAllComment;
+    }
+
+    public String getAvatarHD() {
+        return avatarHD;
+    }
+
+    public void setAvatarHD(String avatarHD) {
+        this.avatarHD = avatarHD;
     }
 
     public String getAvatarLarge() {

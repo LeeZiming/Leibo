@@ -36,7 +36,7 @@ public class TimeLineActivity extends BaseActivity<ActivityTimeLineBinding, Time
     public void initViewObservable() {
         super.initViewObservable();
         initRecyclerView();
-
+        setLoadingVisiblity(true);
         viewModel.reqWeiboTimeLine();
 
         observeWeiboData();
@@ -57,8 +57,13 @@ public class TimeLineActivity extends BaseActivity<ActivityTimeLineBinding, Time
 
     private void observeWeiboData() {
         viewModel.getWeiboList().observe(this, data -> {
+            setLoadingVisiblity(false);
             mWeiboAdapter.addData(data);
         });
+    }
+
+    private void setLoadingVisiblity(boolean visiblity) {
+        binding.loading.setVisibility(visiblity ? View.VISIBLE : View.GONE);
     }
 
 }

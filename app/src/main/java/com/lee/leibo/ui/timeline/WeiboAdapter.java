@@ -32,7 +32,7 @@ public class WeiboAdapter extends BaseQuickAdapter<WeiboInfo, BaseViewHolder> {
                 .apply(new RequestOptions().transform(new CenterCrop(), new RoundedCorners(dp2px(50))))
                 .into((ImageView) viewHolder.getView(R.id.iv_avator));
         viewHolder.setText(R.id.tv_name, weiboInfo.getUser().getScreenName());
-        viewHolder.setText(R.id.tv_description, weiboInfo.getUser().getDescription());
+        viewHolder.setText(R.id.tv_description, weiboInfo.getUser().getVerifiedReason());
         viewHolder.setText(R.id.tv_content, weiboInfo.getText());
     }
 }

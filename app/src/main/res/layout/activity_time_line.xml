@@ -10,7 +10,7 @@
             type="com.lee.leibo.ui.timeline.TimeLineViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -20,26 +20,31 @@
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             app:centerText="@string/app_name"
             app:centerTextColor="@color/blue_032951"
             app:centerTextSize="30sp"
             app:centerType="textView"
             app:fillStatusBar="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:titleBarColor="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@id/title_bar"
             android:background="@color/blue_8AABCA"
             android:overScrollMode="never"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_bar" />
+            android:paddingTop="5dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.xuexiang.xui.widget.progress.loading.MiniLoadingView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="40dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
 
 </layout>
