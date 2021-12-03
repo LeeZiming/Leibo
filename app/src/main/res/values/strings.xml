@@ -2,4 +2,5 @@
     <string name="app_name">Leibo</string>
 
     <string name="toast_network_error">网络错误！</string>
+    <string name="enter_weibo">进入微博</string>
 </resources>

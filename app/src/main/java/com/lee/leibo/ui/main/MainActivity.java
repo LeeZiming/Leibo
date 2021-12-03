@@ -57,6 +57,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
 
         if (TokenManager.iamLoggedIn()) {
             startActivity(ProfileActivity.class);
+            this.finish();
         }
     }
 

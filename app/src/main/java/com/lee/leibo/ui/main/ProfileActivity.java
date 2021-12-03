@@ -8,6 +8,7 @@ import com.lee.leibo.R;
 import com.lee.leibo.app.LeiboApplication;
 import com.lee.leibo.databinding.ActivityProfileBinding;
 import com.lee.leibo.model.UserInfo;
+import com.lee.leibo.ui.timeline.TimeLineActivity;
 
 import me.goldze.mvvmhabit.base.BaseActivity;
 
@@ -29,6 +30,10 @@ public class ProfileActivity extends BaseActivity<ActivityProfileBinding, MainVi
     public void initData() {
         super.initData();
         viewModel.reqUserInfo();
+
+        binding.btnEnterWeibo.setOnClickListener(view -> {
+            startActivity(TimeLineActivity.class);
+        });
     }
 
     @Override

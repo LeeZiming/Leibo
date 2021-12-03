@@ -35,7 +35,6 @@ public class TimeLineActivity extends BaseActivity<ActivityTimeLineBinding, Time
     @Override
     public void initViewObservable() {
         super.initViewObservable();
-        initRefresh();
         initRecyclerView();
 
         viewModel.reqWeiboTimeLine();
@@ -46,17 +45,6 @@ public class TimeLineActivity extends BaseActivity<ActivityTimeLineBinding, Time
     @Override
     public void initData() {
         super.initData();
-    }
-
-    private void initRefresh() {
-        binding.refreshLayout.setRefreshHeader(new ClassicsHeader(this));
-        binding.refreshLayout.setRefreshFooter(new ClassicsFooter(this));
-        binding.refreshLayout.setOnRefreshListener(refreshlayout -> {
-            refreshlayout.finishRefresh(2000/*,false*/);//传入false表示刷新失败
-        });
-        binding.refreshLayout.setOnLoadMoreListener(refreshlayout -> {
-            refreshlayout.finishLoadMore(2000/*,false*/);//传入false表示加载失败
-        });
     }
 
     private void initRecyclerView() {

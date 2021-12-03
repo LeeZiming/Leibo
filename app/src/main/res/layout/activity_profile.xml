@@ -55,6 +55,7 @@
             app:layout_constraintVertical_bias="0.107" />
 
         <LinearLayout
+            android:id="@+id/ll_follow_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -68,16 +69,27 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 tools:ignore="Suspicious0dp">
+
                 <TextView
                     android:id="@+id/tv_followers"
+                    style="@style/TextStyle.Content"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="26">
+                    android:layout_height="wrap_content">
 
                 </TextView>
+
             </LinearLayout>
 
         </LinearLayout>
+
+        <com.xuexiang.xui.widget.button.ButtonView
+            android:id="@+id/btn_enter_weibo"
+            style="@style/ButtonView.Blue"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/enter_weibo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_follow_status" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
