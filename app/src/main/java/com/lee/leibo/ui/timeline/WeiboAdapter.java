@@ -34,5 +34,9 @@ public class WeiboAdapter extends BaseQuickAdapter<WeiboInfo, BaseViewHolder> {
         viewHolder.setText(R.id.tv_name, weiboInfo.getUser().getScreenName());
         viewHolder.setText(R.id.tv_description, weiboInfo.getUser().getVerifiedReason());
         viewHolder.setText(R.id.tv_content, weiboInfo.getText());
+
+        if (weiboInfo.getRepostWeiboInfo() != null) {
+            viewHolder.setText(R.id.tv_repost, weiboInfo.getRepostWeiboInfo().getText());
+        }
     }
 }
