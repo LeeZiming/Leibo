@@ -1,92 +1,63 @@
 package com.lee.leibo.model;
 
-import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
 public class UserInfo implements Serializable {
-    @SerializedName("id")
     private long id;
 
-    @SerializedName("screen_name")
     private String screenName;
 
-    @SerializedName("name")
     private String name;
 
-    @SerializedName("province")
     private String province;
 
-    @SerializedName("city")
     private String city;
 
-    @SerializedName("location")
     private String location;
 
-    @SerializedName("description")
     private String description;
 
-    @SerializedName("url")
     private String url;
 
-    @SerializedName("profile_image_url")
     private String profileImageUrl;
 
-    @SerializedName("domain")
     private String domain;
 
-    @SerializedName("gender")
     private String gender;
 
-    @SerializedName("followers_count")
     private int followersCount;
 
-    @SerializedName("friends_count")
     private int friendsCount;
 
-    @SerializedName("statuses_count")
     private int statusesCount;
 
-    @SerializedName("favourites_count")
     private int favouritesCount;
 
-    @SerializedName("created_at")
     private String createdAt;
 
-    @SerializedName("following")
     private boolean following;
 
-    @SerializedName("allow_all_act_msg")
     private boolean allowAllActMsg;
 
-    @SerializedName("remark")
     private String remark;
 
-    @SerializedName("geo_enabled")
     private boolean geoEnabled;
 
-    @SerializedName("verified")
     private boolean verified;
 
-    @SerializedName("allow_all_comment")
     private boolean allowAllComment;
 
-    @SerializedName("avatar_hd")
     private String avatarHD;
 
-    @SerializedName("avatar_large")
     private String avatarLarge;
 
-    @SerializedName("verified_reason")
     private String verifiedReason;
 
-    @SerializedName("follow_me")
     private boolean followMe;
 
-    @SerializedName("online_status")
     private int onlineStatus;
 
-    @SerializedName("bi_followers_count")
     private int biFollowersCount;
 
     public long getId() {

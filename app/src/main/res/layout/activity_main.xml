@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.lee.leibo.ui.main.MainViewModel" />
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,18 +10,6 @@
         android:background="@color/white"
         tools:context=".ui.main.MainActivity">
 
-        <com.wuhenzhizao.titlebar.widget.CommonTitleBar
-            android:id="@+id/title_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:centerText="@string/app_name"
-            app:centerTextColor="@color/blue_032951"
-            app:centerTextSize="30sp"
-            app:centerType="textView"
-            app:fillStatusBar="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:titleBarColor="@color/white" />
 
         <Button
             android:id="@+id/btn_auth"

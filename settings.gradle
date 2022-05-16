@@ -8,4 +8,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Leibo"
-include ':app'
+include ':domain'
+include ':data'
+include ':app', ':architecture'

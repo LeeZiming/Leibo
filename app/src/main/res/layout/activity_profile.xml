@@ -3,55 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.lee.leibo.ui.main.MainViewModel" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         tools:context=".ui.main.MainActivity">
 
-        <com.wuhenzhizao.titlebar.widget.CommonTitleBar
-            android:id="@+id/title_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:centerText="@string/app_name"
-            app:centerTextColor="@color/blue_032951"
-            app:centerTextSize="30sp"
-            app:centerType="textView"
-            app:fillStatusBar="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:titleBarColor="@color/white" />
 
-        <com.xuexiang.xui.widget.imageview.RadiusImageView
-            android:id="@+id/iv_avator"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="396dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="@+id/title_bar"
-            app:riv_border_color="@color/xui_config_color_gray_6"
-            app:riv_border_width="1px"
-            app:riv_is_circle="true" />
+
 
         <TextView
             android:id="@+id/tv_nick_name"
-            style="@style/TextStyle.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_avator"
             app:layout_constraintVertical_bias="0.107" />
 
         <LinearLayout
@@ -72,7 +40,6 @@
 
                 <TextView
                     android:id="@+id/tv_followers"
-                    style="@style/TextStyle.Content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -81,15 +48,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <com.xuexiang.xui.widget.button.ButtonView
-            android:id="@+id/btn_enter_weibo"
-            style="@style/ButtonView.Blue"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/enter_weibo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ll_follow_status" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

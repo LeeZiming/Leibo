@@ -11,10 +11,14 @@
         <entry key="..\:/Code/Leibo/app/src/main/res/layout/layout_lee_toast.xml" value="0.2957427536231884" />
         <entry key="..\:/Code/Leibo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3697916666666667" />
         <entry key="..\:/Code/Leibo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_time_line.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_weibo.xml" value="0.49493095142863086" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

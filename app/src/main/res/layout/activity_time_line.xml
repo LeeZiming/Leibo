@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.lee.leibo.ui.timeline.TimeLineViewModel" />
-    </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,34 +10,15 @@
         android:background="@color/white"
         tools:context=".ui.timeline.TimeLineActivity">
 
-        <com.wuhenzhizao.titlebar.widget.CommonTitleBar
-            android:id="@+id/title_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            app:centerText="@string/app_name"
-            app:centerTextColor="@color/blue_032951"
-            app:centerTextSize="30sp"
-            app:centerType="textView"
-            app:fillStatusBar="true"
-            app:titleBarColor="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/title_bar"
             android:background="@color/blue_8AABCA"
             android:overScrollMode="never"
             android:paddingTop="5dp" />
 
-        <com.xuexiang.xui.widget.progress.loading.MiniLoadingView
-            android:id="@+id/loading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_margin="40dp"
-            android:visibility="gone" />
 
     </RelativeLayout>
 

@@ -1,48 +1,33 @@
 package com.lee.leibo.model;
 
-import com.google.gson.annotations.SerializedName;
 
 public class WeiboInfo {
-    @SerializedName("idstr")
     private String id; //微博ID
 
-    @SerializedName("created_at")
     private String createdTime; //创建时间
 
-    @SerializedName("text")
     private String text; //微博文本内容
 
-    @SerializedName("source")
     private String source; //微博来源
 
-    @SerializedName("favorited")
     private boolean favorited; //是否已收藏，true：是，false：否
 
-    @SerializedName("truncated")
     private boolean truncated; //是否被截断，true：是，false：否
 
-    @SerializedName("thumbnail_pic")
     private String thumbnailPic; //缩略图片地址，没有时不返回此字段
 
-    @SerializedName("bmiddle_pic")
     private String bmiddlePic; //中等尺寸图片地址，没有时不返回此字段
 
-    @SerializedName("original_pic")
     private String originalPic; //原始图片地址，没有时不返回此字段
 
-    @SerializedName("user")
     private UserInfo user; //微博作者的用户信息字段
 
-    @SerializedName("reposts_count")
     private int repostsCount; //转发数
 
-    @SerializedName("comments_count")
     private int commentsCount; //评论数
 
-    @SerializedName("attitudes_count")
     private int attitudesCount; //表态数
 
-    @SerializedName("retweeted_status")
     private WeiboInfo repostWeiboInfo;
 
 //    @SerializedName("visible")
