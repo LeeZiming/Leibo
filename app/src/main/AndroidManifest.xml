@@ -34,18 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.main.ProfileActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
-            android:exported="true"
-            android:maxAspectRatio="2.4"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.timeline.TimeLineActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
-            android:exported="true"
-            android:maxAspectRatio="2.4"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
